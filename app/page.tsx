@@ -17,9 +17,15 @@ export default function HomePage() {
       <HeroSection />
       <TrustIndicators />
       <AboutSection />
-      <WhyChooseUs />
+      {/* Hidden on mobile for cleaner experience */}
+      <div className="hidden md:block">
+        <WhyChooseUs />
+      </div>
       <ServicesPreview />
-      <ApproachSection />
+      {/* Hidden on mobile for cleaner experience */}
+      <div className="hidden lg:block">
+        <ApproachSection />
+      </div>
       <SustainabilitySection />
       <CTASection />
       <Footer />

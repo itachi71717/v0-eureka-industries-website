@@ -48,12 +48,28 @@ export function SustainabilitySection() {
           </p>
         </div>
 
-        {/* Pillars */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pillars.map((pillar) => (
+        {/* Pillars - Show only 2 on mobile, all 4 on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {pillars.slice(0, 2).map((pillar) => (
             <div 
               key={pillar.title}
               className="text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
+            >
+              <div className="w-16 h-16 bg-[#C00000]/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <pillar.icon className="w-8 h-8 text-[#C00000]" />
+              </div>
+              <h3 className="text-xl font-bold text-white mb-3">
+                {pillar.title}
+              </h3>
+              <p className="text-white/60 leading-relaxed">
+                {pillar.description}
+              </p>
+            </div>
+          ))}
+          {pillars.slice(2).map((pillar) => (
+            <div 
+              key={pillar.title}
+              className="hidden md:block text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all duration-300"
             >
               <div className="w-16 h-16 bg-[#C00000]/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <pillar.icon className="w-8 h-8 text-[#C00000]" />
