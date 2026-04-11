@@ -26,7 +26,7 @@ const approachPoints = [
 
 export function ApproachSection() {
   return (
-    <section className="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-white via-[#f8f8f8] to-[#f0f0f0] relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 opacity-5">
         <Image
@@ -36,6 +36,10 @@ export function ApproachSection() {
           className="object-cover"
         />
       </div>
+
+      {/* Background Accents */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C00000]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#C00000]/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">

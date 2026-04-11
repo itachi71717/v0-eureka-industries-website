@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const contactDetails = [
   {
@@ -25,11 +26,13 @@ const contactDetails = [
 const addresses = [
   {
     city: "Pietermaritzburg",
-    address: "32 Cassimjee Road, Northdale, Pietermaritzburg, 3201"
+    address: "32 Cassimjee Road, Northdale, Pietermaritzburg, 3201",
+    mapsUrl: "https://www.google.com/maps/search/32+Cassimjee+Road+Northdale+Pietermaritzburg"
   },
   {
     city: "Durban",
-    address: "360 Kenyon Howden, Montclair, Durban, 4001"
+    address: "360 Kenyon Howden, Montclair, Durban, 4001",
+    mapsUrl: "https://www.google.com/maps/search/360+Kenyon+Howden+Montclair+Durban"
   }
 ]
 
@@ -40,8 +43,8 @@ export function ContactInfo() {
         Contact Information
       </h2>
 
-      {/* Contact Details */}
-      <div className="space-y-6 mb-10">
+      {/* Contact Details Grid */}
+      <div className="grid md:grid-cols-3 gap-6 mb-10">
         {contactDetails.map((detail) => (
           <div key={detail.label} className="flex items-start gap-4">
             <div className="w-12 h-12 bg-[#C00000]/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -57,11 +60,29 @@ export function ContactInfo() {
                   {detail.value}
                 </a>
               ) : (
-                <div className="text-[#1a1a1a] font-semibold">{detail.value}</div>
+                <div className="text-[#1a1a1a] font-semibold text-sm">{detail.value}</div>
               )}
             </div>
           </div>
         ))}
+      </div>
+
+      {/* WhatsApp CTA - Moved Higher */}
+      <div className="mb-10">
+        <Button 
+          asChild
+          size="lg"
+          className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold"
+        >
+          <a 
+            href="https://wa.me/27629924357?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <MessageCircle className="mr-2 w-5 h-5" />
+            Chat on WhatsApp
+          </a>
+        </Button>
       </div>
 
       {/* Addresses */}
@@ -72,41 +93,38 @@ export function ContactInfo() {
         </h3>
         <div className="space-y-4">
           {addresses.map((location) => (
-            <div 
-              key={location.city} 
-              className="bg-white border border-[#e8e8e8] rounded-lg p-4"
+            <Link 
+              key={location.city}
+              href={location.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group block bg-white border border-[#e8e8e8] rounded-lg p-4 hover:border-[#C00000] hover:shadow-md transition-all duration-300"
             >
-              <div className="font-semibold text-[#C00000] mb-1">{location.city}</div>
+              <div className="font-semibold text-[#C00000] mb-1 flex items-center gap-2 group-hover:gap-3 transition-all">
+                {location.city}
+                <MapPin className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+              </div>
               <div className="text-[#4a4a4a] text-sm">{location.address}</div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
 
-      {/* Operating Area */}
-      <div className="bg-[#1a1a1a] rounded-lg p-6 mb-8">
-        <div className="text-white/60 text-sm mb-2">Operating Area</div>
-        <div className="text-white font-bold text-xl">KwaZulu-Natal (KZN)</div>
-        <div className="text-white/70 text-sm mt-2">
-          Serving residential, commercial, and industrial clients across the province.
+      {/* Service Area */}
+      <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] rounded-lg p-8 border border-white/10">
+        <div className="flex items-start gap-4">
+          <div className="w-14 h-14 bg-[#C00000]/20 rounded-lg flex items-center justify-center flex-shrink-0">
+            <MapPin className="w-7 h-7 text-[#C00000]" />
+          </div>
+          <div className="flex-1">
+            <div className="text-white/60 text-sm font-medium mb-1">Service Area</div>
+            <div className="text-white font-bold text-xl mb-2">KwaZulu-Natal (KZN)</div>
+            <div className="text-white/70 text-sm leading-relaxed">
+              Serving residential, commercial, and industrial clients across the province. We operate in Pietermaritzburg, Durban, and surrounding areas.
+            </div>
+          </div>
         </div>
       </div>
-
-      {/* WhatsApp CTA */}
-      <Button 
-        asChild
-        size="lg"
-        className="w-full bg-[#25D366] hover:bg-[#20BD5A] text-white font-semibold"
-      >
-        <a 
-          href="https://wa.me/27629924357?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <MessageCircle className="mr-2 w-5 h-5" />
-          Chat on WhatsApp
-        </a>
-      </Button>
     </div>
   )
 }

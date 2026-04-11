@@ -58,8 +58,12 @@ const services = [
 
 export function ServicesPreview() {
   return (
-    <section className="py-20 lg:py-32 bg-[#f8f8f8]">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-[#f8f8f8] via-white to-[#efefef] relative overflow-hidden">
+      {/* Background Accents */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-[#C00000]/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#C00000]/5 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block bg-[#C00000]/10 text-[#C00000] text-sm font-semibold px-4 py-2 rounded-full mb-6">

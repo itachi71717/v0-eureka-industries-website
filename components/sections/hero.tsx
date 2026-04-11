@@ -30,11 +30,11 @@ export function HeroSection() {
           {/* Logo Badge */}
           <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Eureka Industries"
-              width={32}
-              height={32}
-              className="w-8 h-8"
+              width={40}
+              height={40}
+              className="w-10 h-10 object-contain"
             />
             <span className="text-white/90 text-sm font-medium">
               Excellence in Construction
@@ -82,7 +82,7 @@ export function HeroSection() {
               asChild
               size="lg"
               variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-6 text-lg"
+              className="border-white/50 text-[#1a1a1a] bg-white hover:bg-white/90 font-semibold px-8 py-6 text-lg"
             >
               <Link href="/services">
                 View Services
@@ -98,12 +98,7 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-white/50 rounded-full animate-bounce" />
-        </div>
-      </div>
+
     </section>
   )
 }

@@ -2,8 +2,11 @@ import Image from "next/image"
 
 export function AboutSection() {
   return (
-    <section className="py-20 lg:py-32 bg-[#f8f8f8]">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-[#f8f8f8] via-white to-[#f0f0f0] relative overflow-hidden">
+      {/* Background Accents */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C00000]/5 rounded-full blur-3xl" />
+      <div className="absolute -bottom-10 -left-10 w-80 h-80 bg-[#C00000]/5 rounded-full blur-3xl" />
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Image Side */}
           <div className="relative">

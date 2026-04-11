@@ -16,13 +16,13 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.jpg"
               alt="Eureka Industries Logo"
-              width={48}
-              height={48}
-              className="w-12 h-12"
+              width={60}
+              height={60}
+              className="w-14 h-14 object-contain"
             />
-            <span className="text-white font-bold text-xl hidden sm:block">
+            <span className="text-white font-bold text-lg hidden sm:block">
               Eureka Industries
             </span>
           </Link>
