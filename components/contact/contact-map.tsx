@@ -13,7 +13,7 @@ export function ContactMap() {
         
         <div className="rounded-xl overflow-hidden border border-white/10">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d884935.6068992855!2d29.634963!3d-29.609988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6a574e79e26cb%3A0x1f03b61d8ac39ce3!2sKwaZulu-Natal%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d884935.6068992855!2d29.634963!3d-29.609988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef6a574e79e26cb%3A0x1f03b61d8ac39ce3!2sKwaZulu-Natal%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus&markers=color:red%7Clabel:PMB%7C-29.6100,30.3900&markers=color:red%7Clabel:DBN%7C-29.8587,31.0192"
             width="100%"
             height="450"
             style={{ border: 0 }}
@@ -23,6 +23,24 @@ export function ContactMap() {
             title="Eureka Industries Service Area - KwaZulu-Natal Map"
             className="grayscale-[50%] contrast-[1.1]"
           />
+        </div>
+
+        {/* Location Labels */}
+        <div className="grid md:grid-cols-2 gap-4 mt-6">
+          <div className="flex items-center gap-3 bg-white/5 rounded-lg p-4 border border-white/10">
+            <div className="w-3 h-3 bg-red-600 rounded-full flex-shrink-0" />
+            <div>
+              <div className="text-white font-semibold">Pietermaritzburg</div>
+              <div className="text-white/60 text-sm">32 Cassimjee Road, Northdale</div>
+            </div>
+          </div>
+          <div className="flex items-center gap-3 bg-white/5 rounded-lg p-4 border border-white/10">
+            <div className="w-3 h-3 bg-red-600 rounded-full flex-shrink-0" />
+            <div>
+              <div className="text-white font-semibold">Durban</div>
+              <div className="text-white/60 text-sm">360 Kenyon Howden, Montclair</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

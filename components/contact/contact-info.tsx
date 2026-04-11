@@ -70,7 +70,7 @@ export function ContactInfo() {
             <div className="text-sm text-[#6a6a6a] mb-1">Email</div>
             <a 
               href="mailto:eurekaindustries.20@gmail.com" 
-              className="text-[#1a1a1a] font-semibold hover:text-[#C00000] transition-colors break-all"
+              className="text-[#1a1a1a] font-semibold hover:text-[#C00000] transition-colors whitespace-nowrap"
             >
               eurekaindustries.20@gmail.com
             </a>
@@ -141,11 +141,8 @@ export function ContactInfo() {
           <div className="flex-1">
             <div className="text-white/60 text-sm font-medium mb-1">Service Coverage</div>
             <div className="text-white font-bold text-xl mb-2">KwaZulu-Natal (KZN)</div>
-            <div className="text-white/70 text-sm leading-relaxed mb-4">
+            <div className="text-white/70 text-sm leading-relaxed">
               We serve residential, commercial, and industrial clients across KZN. Our main offices are based in Pietermaritzburg and Durban, allowing us to efficiently reach clients throughout the province.
-            </div>
-            <div className="text-white/60 text-xs">
-              <strong className="text-white/80">Quote Submissions:</strong> All requests submitted through our contact form are sent to eurekaindustries.20@gmail.com for processing.
             </div>
           </div>
         </div>

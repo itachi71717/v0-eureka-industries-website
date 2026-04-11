@@ -67,11 +67,8 @@ export function ContactForm() {
       <h2 className="text-2xl md:text-3xl font-bold text-[#1a1a1a] mb-2">
         Request a Quote
       </h2>
-      <p className="text-[#6a6a6a] mb-2">
+      <p className="text-[#6a6a6a] mb-8">
         Fill out the form below and we&apos;ll get back to you within 24 hours.
-      </p>
-      <p className="text-xs text-[#999999] mb-8 pb-6 border-b border-[#e8e8e8]">
-        Your submission will be sent to <strong>eurekaindustries.20@gmail.com</strong>
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-6">
