@@ -25,8 +25,14 @@ const indicators = [
 
 export function TrustIndicators() {
   return (
-    <section className="bg-[#C00000] py-8">
-      <div className="container mx-auto px-4 lg:px-8">
+    <section className="bg-gradient-to-r from-[#C00000] to-[#a00000] py-8 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-96 h-64 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/10 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {indicators.map((indicator) => (
             <div 

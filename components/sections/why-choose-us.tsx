@@ -35,10 +35,11 @@ const reasons = [
 
 export function WhyChooseUs() {
   return (
-    <section className="py-20 lg:py-32 bg-[#1a1a1a] relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-[#0f0f0f] via-[#1a1a1a] to-[#0f0f0f] relative overflow-hidden">
       {/* Background Decorations */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C00000]/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#C00000]/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C00000]/12 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-[#C00000]/8 rounded-full blur-3xl" />
+      <div className="absolute top-1/2 right-1/3 w-80 h-80 bg-[#C00000]/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Header */}

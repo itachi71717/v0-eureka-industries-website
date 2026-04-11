@@ -1,14 +1,15 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Phone } from "lucide-react"
+import { ArrowRight, Phone, MessageCircle } from "lucide-react"
 
 export function CTASection() {
   return (
-    <section className="py-20 lg:py-32 bg-[#C00000] relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-[#C00000] to-[#a00000] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/10 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/15 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
@@ -35,23 +36,23 @@ export function CTASection() {
             <Button 
               asChild
               size="lg"
-              variant="outline"
-              className="border-white/30 text-white hover:bg-white/10 hover:text-white font-semibold px-8 py-6 text-lg"
+              className="bg-white text-[#C00000] hover:bg-white/90 font-semibold px-8 py-6 text-lg group"
             >
-              <Link href="/contact">
+              <a href="tel:+27629924357">
                 <Phone className="mr-2" size={20} />
-                Contact Us
-              </Link>
-            </Button>
-          </div>
-
-          <div className="mt-10 pt-10 border-t border-white/20">
-            <p className="text-white/60 text-sm">
-              Call us directly at{" "}
-              <a href="tel:+27629924357" className="text-white hover:underline font-semibold">
-                062 992 4357
+                Call Us
               </a>
-            </p>
+            </Button>
+            <Button 
+              asChild
+              size="lg"
+              className="bg-[#25D366] text-white hover:bg-[#20BD5A] font-semibold px-8 py-6 text-lg group"
+            >
+              <a href="https://wa.me/27629924357?text=Hi%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2" size={20} />
+                WhatsApp Us
+              </a>
+            </Button>
           </div>
         </div>
       </div>

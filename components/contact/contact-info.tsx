@@ -43,28 +43,50 @@ export function ContactInfo() {
         Contact Information
       </h2>
 
-      {/* Contact Details Grid */}
-      <div className="grid md:grid-cols-3 gap-6 mb-10">
-        {contactDetails.map((detail) => (
-          <div key={detail.label} className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-[#C00000]/10 rounded-lg flex items-center justify-center flex-shrink-0">
-              <detail.icon className="w-5 h-5 text-[#C00000]" />
-            </div>
-            <div>
-              <div className="text-sm text-[#6a6a6a] mb-1">{detail.label}</div>
-              {detail.href ? (
-                <a 
-                  href={detail.href} 
-                  className="text-[#1a1a1a] font-semibold hover:text-[#C00000] transition-colors"
-                >
-                  {detail.value}
-                </a>
-              ) : (
-                <div className="text-[#1a1a1a] font-semibold text-sm">{detail.value}</div>
-              )}
-            </div>
+      {/* Contact Details Grid - Separated for better spacing */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        {/* Phone */}
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 bg-[#C00000]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <Phone className="w-5 h-5 text-[#C00000]" />
           </div>
-        ))}
+          <div>
+            <div className="text-sm text-[#6a6a6a] mb-1">Phone</div>
+            <a 
+              href="tel:+27629924357" 
+              className="text-[#1a1a1a] font-semibold hover:text-[#C00000] transition-colors text-lg"
+            >
+              062 992 4357
+            </a>
+          </div>
+        </div>
+
+        {/* Email */}
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 bg-[#C00000]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <Mail className="w-5 h-5 text-[#C00000]" />
+          </div>
+          <div>
+            <div className="text-sm text-[#6a6a6a] mb-1">Email</div>
+            <a 
+              href="mailto:eurekaindustries.20@gmail.com" 
+              className="text-[#1a1a1a] font-semibold hover:text-[#C00000] transition-colors break-all"
+            >
+              eurekaindustries.20@gmail.com
+            </a>
+          </div>
+        </div>
+
+        {/* Operating Hours */}
+        <div className="flex items-start gap-4">
+          <div className="w-12 h-12 bg-[#C00000]/10 rounded-lg flex items-center justify-center flex-shrink-0">
+            <Clock className="w-5 h-5 text-[#C00000]" />
+          </div>
+          <div>
+            <div className="text-sm text-[#6a6a6a] mb-1">Operating Hours</div>
+            <div className="text-[#1a1a1a] font-semibold text-sm">Monday - Friday: 8am - 5pm</div>
+          </div>
+        </div>
       </div>
 
       {/* WhatsApp CTA - Moved Higher */}
@@ -85,11 +107,11 @@ export function ContactInfo() {
         </Button>
       </div>
 
-      {/* Addresses */}
+      {/* Our Locations */}
       <div className="mb-10">
         <h3 className="text-lg font-bold text-[#1a1a1a] mb-4 flex items-center gap-2">
           <MapPin className="w-5 h-5 text-[#C00000]" />
-          Our Locations
+          Our Business Locations
         </h3>
         <div className="space-y-4">
           {addresses.map((location) => (
@@ -110,17 +132,20 @@ export function ContactInfo() {
         </div>
       </div>
 
-      {/* Service Area */}
+      {/* Service Area Information */}
       <div className="bg-gradient-to-br from-[#1a1a1a] to-[#0f0f0f] rounded-lg p-8 border border-white/10">
         <div className="flex items-start gap-4">
           <div className="w-14 h-14 bg-[#C00000]/20 rounded-lg flex items-center justify-center flex-shrink-0">
             <MapPin className="w-7 h-7 text-[#C00000]" />
           </div>
           <div className="flex-1">
-            <div className="text-white/60 text-sm font-medium mb-1">Service Area</div>
+            <div className="text-white/60 text-sm font-medium mb-1">Service Coverage</div>
             <div className="text-white font-bold text-xl mb-2">KwaZulu-Natal (KZN)</div>
-            <div className="text-white/70 text-sm leading-relaxed">
-              Serving residential, commercial, and industrial clients across the province. We operate in Pietermaritzburg, Durban, and surrounding areas.
+            <div className="text-white/70 text-sm leading-relaxed mb-4">
+              We serve residential, commercial, and industrial clients across KZN. Our main offices are based in Pietermaritzburg and Durban, allowing us to efficiently reach clients throughout the province.
+            </div>
+            <div className="text-white/60 text-xs">
+              <strong className="text-white/80">Quote Submissions:</strong> All requests submitted through our contact form are sent to eurekaindustries.20@gmail.com for processing.
             </div>
           </div>
         </div>
