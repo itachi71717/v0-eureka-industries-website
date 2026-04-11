@@ -11,11 +11,11 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-3 mb-6">
               <Image
-                src="/images/logo.png"
+                src="/images/logo.jpg"
                 alt="Eureka Industries Logo"
                 width={48}
                 height={48}
-                className="w-12 h-12"
+                className="w-12 h-12 object-contain"
               />
               <span className="font-bold text-xl">Eureka Industries</span>
             </Link>

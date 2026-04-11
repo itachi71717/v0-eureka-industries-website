@@ -78,14 +78,14 @@ export function ServicesPreview() {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Grid - Show fewer on mobile */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service) => (
+          {services.slice(0, 6).map((service) => (
             <Link 
               key={service.title}
               href="/services"
               className={`group relative bg-white rounded-xl p-6 shadow-sm border hover:shadow-lg hover:border-[#C00000]/30 transition-all duration-300 ${
-                service.featured ? 'border-[#C00000] ring-2 ring-[#C00000]/20' : 'border-[#e8e8e8]'
+                service.featured ? 'border-[#C00000] ring-2 ring-[#C00000]/20 md:col-span-2 lg:col-span-1' : 'border-[#e8e8e8]'
               }`}
             >
               {service.featured && (

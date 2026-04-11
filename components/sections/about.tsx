@@ -8,8 +8,8 @@ export function AboutSection() {
       <div className="absolute -bottom-10 -left-10 w-80 h-80 bg-[#C00000]/5 rounded-full blur-3xl" />
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-          {/* Image Side */}
-          <div className="relative">
+          {/* Image Side - Hidden on Mobile */}
+          <div className="relative hidden md:block">
             <div className="relative aspect-[4/3] rounded-lg overflow-hidden">
               <Image
                 src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop"
@@ -40,18 +40,18 @@ export function AboutSection() {
                 and project management company delivering innovative infrastructure solutions across 
                 KwaZulu-Natal.
               </p>
-              <p>
+              <p className="hidden md:block">
                 Built on intelligent risk-taking, a strong work ethic, and prudent customer relationships, 
                 we have developed a reputation for excellence, reliability, and strategic execution.
               </p>
-              <p>
+              <p className="hidden lg:block">
                 We serve both public and private sector clients, delivering end-to-end solutions 
                 tailored to each project.
               </p>
             </div>
 
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-[#e0e0e0]">
+            {/* Stats - Hidden on Mobile */}
+            <div className="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-[#e0e0e0] hidden md:grid">
               <div>
                 <div className="text-3xl md:text-4xl font-bold text-[#C00000]">KZN</div>
                 <div className="text-sm text-[#6a6a6a] mt-1">Service Area</div>
