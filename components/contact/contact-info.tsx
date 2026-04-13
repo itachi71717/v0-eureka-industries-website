@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, Clock, MessageCircle } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 
@@ -89,8 +89,8 @@ export function ContactInfo() {
         </div>
       </div>
 
-      {/* WhatsApp CTA - Moved Higher */}
-      <div className="mb-10">
+      {/* Social Media CTAs */}
+      <div className="mb-10 space-y-3">
         <Button 
           asChild
           size="lg"
@@ -103,6 +103,20 @@ export function ContactInfo() {
           >
             <MessageCircle className="mr-2 w-5 h-5" />
             Chat on WhatsApp
+          </a>
+        </Button>
+        <Button 
+          asChild
+          size="lg"
+          className="w-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] hover:opacity-90 text-white font-semibold"
+        >
+          <a 
+            href="https://www.instagram.com/eurekaindustries6?utm_source=qr&igsh=MWVxeWU1enAzYWVwZw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Instagram className="mr-2 w-5 h-5" />
+            Our Instagram
           </a>
         </Button>
       </div>

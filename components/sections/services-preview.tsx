@@ -58,7 +58,18 @@ const services = [
 
 export function ServicesPreview() {
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-[#f8f8f8] via-white to-[#efefef] relative overflow-hidden">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-[#f8f8f8] via-white to-[#efefef] relative overflow-hidden md:bg-gradient-to-br">
+      {/* Mobile Background Image */}
+      <div className="absolute inset-0 md:hidden opacity-5">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/mobile-bg-texture.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+      </div>
       {/* Background Accents */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-[#C00000]/5 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-0 w-80 h-80 bg-[#C00000]/5 rounded-full blur-3xl" />

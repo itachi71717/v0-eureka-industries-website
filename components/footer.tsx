@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { Mail, Phone, MapPin } from "lucide-react"
+import { Mail, Phone, MapPin, Instagram } from "lucide-react"
 
 export function Footer() {
   return (
@@ -82,6 +82,15 @@ export function Footer() {
                 <MapPin size={18} className="text-[#C00000] flex-shrink-0 mt-1" />
                 <span>Operating Across KwaZulu-Natal</span>
               </div>
+              <a 
+                href="https://www.instagram.com/eurekaindustries6?utm_source=qr&igsh=MWVxeWU1enAzYWVwZw==" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-3 text-white/70 hover:text-[#C00000] transition-colors"
+              >
+                <Instagram size={18} className="text-[#C00000]" />
+                Our Instagram
+              </a>
             </div>
           </div>
         </div>
