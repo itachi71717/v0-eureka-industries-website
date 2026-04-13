@@ -26,6 +26,17 @@ const pillars = [
 export function SustainabilitySection() {
   return (
     <section className="py-20 lg:py-32 bg-gradient-to-br from-[#1a1a1a] via-[#252525] to-[#1a1a1a] relative overflow-hidden">
+      {/* Mobile Background Image */}
+      <div className="absolute inset-0 md:hidden opacity-10">
+        <div 
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url(/mobile-bg-texture.jpg)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+          }}
+        />
+      </div>
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#C00000] rounded-full blur-3xl" />
