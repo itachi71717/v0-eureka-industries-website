@@ -32,7 +32,7 @@ export function HeroSection() {
       {/* Main Content Container */}
       <div className="relative z-10 min-h-screen flex flex-col justify-between">
         {/* Top Spacing */}
-        <div className="flex-1 flex items-center justify-center pt-20 md:pt-0">
+        <div className="flex-1 flex items-center justify-center pt-20 md:pt-32">
           <div className="w-full px-6 md:px-8">
             {/* Company Name - MASSIVE AND DOMINANT */}
             <div className={`transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
